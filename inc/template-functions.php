@@ -35,3 +35,20 @@ function troubleshooting_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'troubleshooting_pingback_header' );
+
+function troubleshooting_add_cover() {
+    echo '<div class="crocoblock-site-cover"></div>';
+}
+add_action( 'wp_footer', 'troubleshooting_add_cover' );
+
+add_filter( 'croco-site-menu/rest/url', function() {
+    return 'https://crocoblock.com/wp-json/';
+} );
+
+function troubleshooting_google_fonts() {
+    if (!is_admin()) {
+        wp_register_style('google', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap', array(), null, 'all');
+        wp_enqueue_style('google');
+    }
+}
+add_action('wp_enqueue_scripts', 'troubleshooting_google_fonts');
