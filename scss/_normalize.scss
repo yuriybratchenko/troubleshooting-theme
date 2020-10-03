@@ -351,3 +351,15 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+ * Add transition for links.
+ */
+
+a {
+  transition: all .15s;
+  text-decoration: none;
+  &:hover {
+    transition: all .25s;
+  }
+}
