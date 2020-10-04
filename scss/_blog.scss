@@ -85,3 +85,114 @@ div #was-this-helpful {
 		}
 	}
 }
+
+.ts-manager {
+	&__search-section {
+		background: linear-gradient(-134.35deg, #49B5D2 20.49%, #26E8A8 99.72%), linear-gradient(134.35deg, #5B77E7 20.49%, #49B5D2 99.72%);
+		padding: 70px 0 84px;
+		margin-top: -1px;
+		z-index: 10;
+		&.elementor-section {
+			div.elementor-container {
+				max-width: 580px;
+			}
+		}
+		h1 {
+			font-weight: bold;
+			font-size: 60px;
+			line-height: 72px;
+			text-align: center;
+			margin-bottom: 15px;
+			color: #fff;
+		}
+
+		div div .jet-ajax-search {
+			&__field {
+				color: #5C6B79;
+				font-size: 16px;
+				border-radius: 3px;
+				border: none;
+				&[type="search"] {
+					padding: 10px 20px 10px 46px;
+				}
+			}
+			&__field-icon.jet-ajax-search-icon {
+				font-size: 24px;
+				left: 10px;
+			}
+			&__spinner {
+				color: #34D7A1;
+			}
+			&__message {
+				font-size: 14px;
+				color: #556474;
+			}
+			&__results-area {
+				overflow: hidden;
+				box-shadow: 0 2px 4px rgba(22, 43, 64, 0.1);
+			}
+			&__item-link {
+				background-color: #fff;
+				&:hover {
+					background-color: rgba(97, 123, 229, 0.08);
+				}
+			}
+		}
+	}
+	&__archive-section {
+		background-color: transparent;
+		background-image: linear-gradient(90deg,#fff 61%,#F9FAFB 0%);
+		&.elementor-section {
+			div.elementor-container {
+				max-width: 1220px;
+			}
+		}
+	}
+	&__articles-box {
+		background-color: #F9FAFB;
+		padding: 32px 20px 70px 29px;
+		margin-left: 30px;
+	}
+	&__articles-menu {
+		padding: 30px 0 0 0;
+	}
+
+	//Answer box
+	&-answer-box {
+		border-top: 1px solid rgba(22, 43, 64, 0.2);
+		padding-top: 28px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		&__title {
+			font-weight: bold;
+			font-size: 32px;
+			line-height: 40px;
+			margin-bottom: 25px;
+		}
+		&__btn {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #fff;
+			border: 1px solid #E4E8ED;
+			border-radius: 3px;
+			font-weight: bold;
+			font-size: 14px;
+			color: #162B40;
+			svg {
+				margin: 0 12px -2px 0;
+				path {
+					transition: all .15s;
+				}
+			}
+			&:hover {
+				background-color: #617BE5;
+				color: #fff;
+				border-color: #617BE5;
+				svg path {
+					fill: #fff;
+					transition: all .25s;
+				}
+			}
+		}
+	}
+}
