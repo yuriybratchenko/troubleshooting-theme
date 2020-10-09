@@ -1,218 +1,36 @@
 $border_color: #e4e8ed;
-$primary_color: #34D7A1;
-$text_color: #556474;
-
-.footer-container {
-	border-top: 1px solid $border_color;
-	padding: 40px 0;
-	.footer-container__wrap {
-		font-size: 14px;
-		line-height: 23px;
-		text-align: center;
-	}
-	.social-list {
-		padding: 10px 0 0 0;
-		cursor: default;
-		a {
-			margin: 0 3px;
-			color: $text_color;
-			&:hover {
-				color: $primary_color;
-			}
-			&:before {
-				font-size: 15px;
-			}
-		}
-	}
-}
-
-.footer-menu {
-	.footer-menu__items {
-		display: flex;
-		justify-content: center;
-		margin: 0;
-		.menu-item {
-			list-style: none;
-			margin: 13px 8px 12px 8px;
-			line-height: 23px;
-			padding: 0;
-			> a {
-				display: block;
-				text-transform: uppercase;
-				letter-spacing: 0.7px;
-				line-height: 23px;
-				color: $text_color;
-				font-weight: 400;
-				&:hover {
-					color: $primary_color;
-				}
-			}
-		}
-	}
-}
-
-.site-footer {
-	background-color: #fff;
-	padding: 0 0 70px;
-	
-	.footer-widget-area {
-		.widget+.widget {
-			margin-top: 0;
-			padding-top: 0;
-			border-top: none;
-		}
-		
-		&.mobile {
-			padding-top: 65px;
-		}
-	}
-	
-	.site-info {
-		font-size: 14px;
-		
-		a {
-			color: #617BE5;
-			font-weight: 500;
-		}
-	}
-}
-
-$border__radius: 3px;
-$color__invert: #fff;
-$color__text: #5C6B79;
 $color__accent: #34D7A1;
 $color__accent2: #617BE5;
-$color__heading: #162B40;
+$text_color: #5c6b79;
 
-div .jet-subscribe-form__form {
-	.jet-subscribe-form {
-		&__input {
-			border-radius: $border__radius;
-			background-color: $color__invert;
-			color: $color__text;
-			font-size: 16px;
-			border: 1px solid $border_color;
-			padding: 10px 12px;
-			
-			&:focus {
-				box-shadow: 0 0 0 1px #e4e8ed;
-				background: #F9FAFB;
-			}
-		}
-		
-		&__submit.elementor-button {
-			padding: 8px 30px;
-			background-color: $color__accent;
-			color: $color__invert;
-			border-radius: $border__radius;
-			box-shadow: 0 10px 10px 0 rgba(22,43,64,0.12);
-			
-			&:hover {
-				background-color: $color__heading;
-			}
-		}
-		
-		&__message {
-			top: auto;
-		}
-		
-		&--response-error {
-			.jet-subscribe-form__message span {
-				font-size: 13px;
-				margin-top: -2px;
-			}
-		}
-		
-		&__message-inner span {
-			font-size: 13px;
-			margin-top: -2px;
-		}
-	}
-	
-	&--inline-layout {}
-}
-
-div .jet-subscribe-form--inline-layout  {
-	.jet-subscribe-form__input-group {
-		flex-wrap: nowrap;
-	}
-}
-
-.site-footer {
+footer.site-footer {
 	border-top: 1px solid $border_color;
-	.footer-widget-area {
-		
-		.main-nav-list a {
-			color: $color__heading;
-			
-			&:hover {
-				color: $color__accent;
-			}
-		}
-		
-		.sub-nav-list a {
-			&:hover {
-				color: $color__accent2;
-			}
-		}
-		
-		.widget {
-			margin-bottom: 15px;
-		}
-		
-		&.mobile {
-			padding-top: 65px;
-		}
-	}
+	background-color: #fff;
+	padding: 34px 0;
 	
 	.site-info {
+		font-size: 14px;
+		color: $text_color;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-size: 14px;
-		
-		@media ( max-width: 600px ) {
+
+		.crocoblock-social-list {
+			justify-content: flex-end;
+		}
+	}
+
+	@media ( max-width: 940px ) {
+		.site-info {
 			flex-direction: column;
 			justify-content: center;
 			text-align: center;
-		}
-		
-		.crocoblock_made_in {
-			display: flex;
-			align-items: center;
-			
-			span {
-				margin-left: 5px;
+
+			div.crocoblock-social-list {
+				&__item {
+					margin: 0 0 0 16px;
+				}
 			}
-		}
-		
-		a {
-			color: $color__accent2;
-			font-weight: 500;
-			
-			&:hover {
-				color: $color__accent;
-			}
-		}
-	}
-	
-	.jet-subscribe-form__submit {
-		line-height: 25px;
-		font-weight: 700;
-	}
-	.jet-subscribe-form__message {
-		padding-top: 5px;
-	}
-}
-.site-footer ul {
-	list-style: none;
-	margin: 0 0 1.5em 0;
-	padding-left: 0;
-	li {
-		padding-left: 0;
-		position: relative;
-		&:before {
-			display: none;
 		}
 	}
 }
