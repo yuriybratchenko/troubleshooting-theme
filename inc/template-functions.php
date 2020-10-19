@@ -114,3 +114,34 @@ function troubleshooting_footer_social() {
 
 	echo $global_html;
 }
+
+/**
+ * WPSEO add noindex for pagination
+ */
+
+function troubleshooting_noindex_paged() {
+    if ( is_paged() ) {
+        add_filter( 'wpseo_canonical', '__return_false' );
+        add_filter( 'wpseo_disable_adjacent_rel_links', '__return_true' );
+
+        echo '<meta name="robots" content="noindex,nofollow">';
+    }
+}
+
+add_action( 'wp_head', 'troubleshooting_noindex_paged', 0 );
+
+// Modify logo func
+function troubleshooting_modify_logo() {
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $html = sprintf( '<a href="https://crocoblock.com" class="custom-logo-link" rel="home" itemprop="url">%1$s</a>',
+        wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+            'class'    => 'custom-logo',
+            'itemprop' => 'logo'
+        ) )
+    );
+
+    return $html;
+}
+
+add_filter( 'get_custom_logo', 'troubleshooting_modify_logo' );
