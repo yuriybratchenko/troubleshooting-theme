@@ -13,9 +13,15 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+/**
+ * Page scroll normalize
+ */
+#page.site {
+  overflow-x: hidden;
+}
+
 /* Sections
    ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
  */
@@ -362,4 +368,19 @@ a {
   &:hover {
     transition: all .25s;
   }
+}
+
+/**
+ * Images response.
+ */
+div img {
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Outline null for elements
+ */
+.jet-ajax-search__field {
+  outline: 0;
 }
