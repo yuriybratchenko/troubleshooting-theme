@@ -145,3 +145,14 @@ function troubleshooting_modify_logo() {
 }
 
 add_filter( 'get_custom_logo', 'troubleshooting_modify_logo' );
+
+/**
+ * Guten editor styles connector
+ */
+
+function guten_editor_styles(){
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'editor-styles.css' );
+}
+
+add_action( 'after_setup_theme', 'guten_editor_styles' );
