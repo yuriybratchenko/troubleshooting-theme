@@ -184,3 +184,19 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Prints site header CSS classes.
+ */
+function crocoblock_header_class( $classes = array() ) {
+
+	$classes[] = 'site-header';
+
+  if ( wp_is_mobile() ) {
+    $classes[] = 'site-header-mobile';
+  } else {
+    $classes[] = 'site-header-desktop';
+  }
+
+	echo 'class="' . join( ' ', $classes ) . '"';
+}

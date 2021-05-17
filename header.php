@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'troubleshooting' ); ?></a>
 
-    <header id="masthead" class="site-header" itemscope itemtype="http://schema.org/WPHeader"><?php
+    <header id="masthead" <?php crocoblock_header_class(); ?> itemscope itemtype="http://schema.org/WPHeader"><?php
         if ( wp_is_mobile() ) {
             get_template_part( 'header-mobile' );
         } else {
