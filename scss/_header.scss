@@ -1,0 +1,22 @@
+// Header
+.croco-site-desktop-menu__top-list,
+.megamenu-plugin-list,
+.menu-list {
+	padding: 0;
+}
+
+.croco-site-desktop-menu__item-name {
+	.croco-site-desktop-menu__item-title {
+		align-items: center;
+	}
+}
+
+.menu-list-link {
+	align-items: center;
+}
+
+.site-header {
+	.elementor-section.elementor-section-boxed>.elementor-container {
+		max-width: 1200px;
+	}
+}
